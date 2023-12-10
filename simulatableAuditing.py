@@ -127,9 +127,6 @@ class SumAuditing(Auditor):
 class MaxAuditing(Auditor):
     def __init__(self, data: list) -> None:
         super().__init__(data)
-        # check if there is duplicate value
-        if len(set(data)) != len(data):
-            raise ValueError("Duplicate value detected")
         self._queries = []
         self._answers = []
 
